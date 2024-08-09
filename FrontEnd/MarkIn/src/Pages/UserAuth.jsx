@@ -4,6 +4,7 @@ const UserAuth = () => {
   return (
     <div>
 {/* use of outlet -> use for nested routing */}
+{/* outlet */}
    <Outlet/>
     </div>
   )
