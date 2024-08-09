@@ -3,6 +3,8 @@ import React from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa"; // Import the icons you want to use
 
 import { LoginSchema } from "../schema/form/Login";
+import { NavLink, Outlet } from "react-router-dom";
+import ForgetPassword from "./ForgetPassword";
 
 // Initial values for the form
 const initialValues = {
@@ -22,6 +24,7 @@ const LogIn = () => {
 
   return (
     <>
+   
       <div className="container min-h-screen flex justify-center items-center p-4">
         <div className="form flex flex-col justify-center items-center min-h-[450px] bg-white shadow-2xl rounded-lg w-96 max-w-md p-4">
           <h1 className="text-2xl text-center p-2 font-bold hover:underline mb-5">
@@ -66,7 +69,9 @@ const LogIn = () => {
                 <input type="checkbox" id="remember" className="mr-2" />
                 <span className="text-sm text-gray-700">Remember me</span>
               </div>
-              <span className="text-[13px] text-gray-700 cursor-pointer">Forget Password?</span>
+              <span className="text-[13px] text-gray-700 cursor-pointer"><NavLink to="/ForgetPassword">
+              Forget Password?
+                </NavLink></span>
             </div>
             <br />
             <button
