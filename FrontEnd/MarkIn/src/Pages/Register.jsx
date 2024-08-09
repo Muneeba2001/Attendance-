@@ -20,7 +20,6 @@ const Register = () => {
         console.log(values);
       },
     });
-  
 
   return (
     <div className="Register flex min-h-screen items-center justify-center bg-slate-200 p-6">

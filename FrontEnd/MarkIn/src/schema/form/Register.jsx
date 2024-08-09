@@ -1,4 +1,5 @@
 import * as yup from "yup";
+
 export const registerSchema = yup.object({
   name: yup.string().min(2).max(25).required("enter you name"),
   email: yup.string().email().required("enter you email"),
