@@ -9,4 +9,4 @@ export const registerSchema = yup.object({
     .oneOf([yup.ref("password"), null], "Password must match"),
 });
 
-export default registerSchema;
+//export default registerSchema;
