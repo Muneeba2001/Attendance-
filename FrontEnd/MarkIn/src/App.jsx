@@ -4,12 +4,15 @@ import LogIn from "./Pages/Login";
 import UserAuth from "./Pages/UserAuth";
 import Register from "./Pages/Register"
 import ForgetPassword from "./Pages/ForgetPassword";
+import Home from "./Pages/Home";
+import DefaultLayout from "./DefaultLayout";
 
 function App() {
   return (
     <>
      
      <Routes>
+      <Route path="/" element = {<DefaultLayout><Home/></DefaultLayout>}/>
   <Route path="UserAuth" element={<UserAuth />}>
     <Route path="Register" element={<Register />} />
     <Route path="Login" element={<LogIn />} />
