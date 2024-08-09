@@ -9,14 +9,14 @@ function App() {
   return (
     <>
      
-     
-      <Routes>
-        <Route path="/UserAuth" element = {<UserAuth/>}>
-          <Route path="Register" element = {<Register/>} />
-          <Route path="Login" element = {<LogIn/>}/>
-          </Route>
-          <Route path="/ForgetPassword" element = {<ForgetPassword/>}/>
-      </Routes>
+     <Routes>
+  <Route path="UserAuth" element={<UserAuth />}>
+    <Route path="Register" element={<Register />} />
+    <Route path="Login" element={<LogIn />} />
+    <Route path="ForgetPassword" element={<ForgetPassword />} />
+  </Route>
+</Routes>
+
     </>
   );
 }

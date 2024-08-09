@@ -3,7 +3,7 @@ import React from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa"; // Import the icons you want to use
 
 import { LoginSchema } from "../schema/form/Login";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ForgetPassword from "./ForgetPassword";
 
 // Initial values for the form
@@ -31,7 +31,7 @@ const LogIn = () => {
             Welcome back!
           </h1>
 
-          <form onSubmit={handleSubmit} className="w-full">
+          <form onSubmit={handleSubmit} className="w-full ">
             <div className="relative mb-4">
               <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
               <input
@@ -69,17 +69,19 @@ const LogIn = () => {
                 <input type="checkbox" id="remember" className="mr-2" />
                 <span className="text-sm text-gray-700">Remember me</span>
               </div>
-              <span className="text-[13px] text-gray-700 cursor-pointer"><NavLink to="/ForgetPassword">
+              <span className="text-[13px] text-gray-700 cursor-pointer"><NavLink to="/UserAuth/ForgetPassword">
               Forget Password?
                 </NavLink></span>
             </div>
             <br />
+            <div className="flex justify-center items-center">
             <button
               type="submit"
-              className="bg-black text-white w-52 h-10 rounded-3xl hover:scale-105 transition-transform duration-300"
+              className="bg-black text-white w-44 h-10 rounded-3xl hover:scale-105 transition-transform duration-300"
             >
               Login
             </button>
+            </div>
           </form>
         </div>
       </div>
