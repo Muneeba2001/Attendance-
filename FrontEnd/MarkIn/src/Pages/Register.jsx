@@ -1,7 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
-import registerSchema from "../schema/form";
+
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import { registerSchema } from "../schema/form/Register";
 
 const initialValues = {
   name: "",
