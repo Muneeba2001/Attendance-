@@ -2,14 +2,17 @@ import React from 'react';
 import forgetPassword from "../assets/forgetPassword.jpg";
 import { NavLink } from 'react-router-dom';
 import { useFormik } from 'formik';
+import { passwordSchema } from '../schema/form/ForgetPassword';
 const initialValues = {
     password : "",
 }
 const ForgetPassword = () => {
     const {values,handleSubmit,handleChange} = useFormik({
     initialValues: initialValues,
-    onSubmit : (values) => {
+    validationSchema : passwordSchema,
+    onSubmit : (values,action) => {
         console.log("Form is submitting", values)
+        action.resetForm()
     }
     })
   return (
