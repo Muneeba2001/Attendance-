@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
-import registerSchema from "../schema/form";
+import registerSchema from "../schema/form/Register";
+import axios from "axios";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 
 const initialValues = {
@@ -16,7 +17,15 @@ const Register = () => {
       initialValues,
       validationSchema: registerSchema,
       onSubmit: (values) => {
-        console.log(values);
+        axios
+          .post("http://localhost:3000/register", {
+            name: values.name,
+            email: values.email,
+            password: values.password,
+            confirmPassword: values.confirm_password,
+          })
+          .then((result) => console.log(result))
+          .catch((err) => console.log(err));
       },
     });
 
@@ -24,7 +33,6 @@ const Register = () => {
     <div className="Register flex min-h-screen items-center justify-center bg-slate-200 p-6">
       <form
         onSubmit={handleSubmit}
-        action=""
         className="container flex w-full max-w-md flex-col rounded-sm border border-gray-300 bg-white p-8 shadow-lg"
       >
         <div>
@@ -104,6 +112,7 @@ const Register = () => {
             <input type="checkbox" name="keep_signin" id="keep_signin" />
             <label htmlFor="keep_signin">Keep me signed in</label>
           </div>
+
           <div className="btn flex items-center justify-center">
             <button
               type="submit"
