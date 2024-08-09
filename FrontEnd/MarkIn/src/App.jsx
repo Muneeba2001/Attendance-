@@ -6,6 +6,7 @@ import Register from "./Pages/Register"
 import ForgetPassword from "./Pages/ForgetPassword";
 import Home from "./Pages/Home";
 import DefaultLayout from "./DefaultLayout";
+import Attendance from "./Pages/Attendance";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      
      <Routes>
       <Route path="/" element = {<DefaultLayout><Home/></DefaultLayout>}/>
+      <Route path="/Attendance" element = {<Attendance/>} />
       {/* user Authentication Route */}
   <Route path="UserAuth" element={<UserAuth />}>
     <Route path="Register" element={<Register />} />
