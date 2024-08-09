@@ -8,10 +8,20 @@ return(
          <h1 className="text-white">Logo</h1>
     <nav className="  text-white  p-4 space-x-6">
    
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/">AboutUs</NavLink>
-        <NavLink to="/">Gallery</NavLink>
-        <NavLink to="/">FAQ</NavLink>
+        <NavLink to="/"     className={({ isActive }) =>
+            isActive ? "text-white border-b-4 border-white pb-1" : "text-white"
+          }>Home</NavLink>
+            <NavLink to="/Attendance" 
+            className={({ isActive }) =>
+                isActive  ? "text-white border-b-4 border-white pb-1" : "text-white"
+              }>Attendance</NavLink>
+        <NavLink to="/Gallery"     className={({ isActive }) =>
+            isActive ? "text-white border-b-4 border-white pb-1" : "text-white"
+          }>Gallery</NavLink>
+      
+        <NavLink to="/FAQ"     className={({ isActive }) =>
+            isActive ? "text-white border-b-4 border-white pb-1" : "text-white"
+          }>FAQ</NavLink>
     </nav>
 </header>
 )
